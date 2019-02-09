@@ -19,6 +19,14 @@ export class UserForm extends Component {
         });
     };
 
+    // Go back to prev step
+    prevStep = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step - 1
+        });
+    };
+
   render() {
     return (
       <div>
