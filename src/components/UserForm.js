@@ -19,6 +19,11 @@ export class UserForm extends Component {
         });
     };
 
+    // Handle fields change
+    handleChange = input => e => {
+        this.setState({[input]: e.target.value});
+    };
+
     // Go back to prev step
     prevStep = () => {
         const { step } = this.state;
