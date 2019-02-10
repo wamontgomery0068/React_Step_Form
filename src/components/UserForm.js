@@ -36,11 +36,18 @@ export class UserForm extends Component {
       const { step } = this.state;
       const { firstName, lastName, email, occupation, city, bio} = this.state;
       const values = { firstName, lastName, email, occupation, city, bio};
-    return (
-      <div>
-        
-      </div>
-    )
+
+      // Instead of a return statement we are going to have a switch statement
+    switch(step){
+      case 1:
+        return(
+          <FormUserDetails
+            nextStep={this.state}
+            handleChange={this.handleChange}
+            value={values}
+          />
+        )
+    }
   }
 }
 
